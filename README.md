@@ -24,7 +24,12 @@ pip install -r requirements.txt
 Exceptions are:
 
 !pip install keras
+
 !pip install nearpy
+
+We still added to this repo requirements, which authors of CRAIG repository used (CRAIG_requirements.txt)
+
+They can be installed using python pip install -r requirements.txt
 
 ## Example of usage of the CRAIG code
 
