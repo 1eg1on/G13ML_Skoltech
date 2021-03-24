@@ -1,6 +1,7 @@
 # An Empirical Study of Example Forgetting during Deep Neural Network Learning
 
 This repository contains code for the paper [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://arxiv.org/abs/1812.05159).
+The CRAIG part was reimplemented to make it work, using part of the code from https://github.com/baharanm/craig (corresponding code for the CRAIG paper).
 
 Bibtex: 
 ```
@@ -17,6 +18,24 @@ The environment requirements for the code in this repository are provided in req
 ```
 pip install -r requirements.txt
 ```
+
+## All the requirements for using the CRAIG part of the code are autimatically installed in the scripts (better to be tested on Collab though)
+
+Exceptions are:
+
+!pip install keras
+!pip install nearpy
+
+## Example of usage of the CRAIG code
+
+In the corresponding directory one must run:
+
+python logistic_self.py --data mnist --method sgd -s 0.1 --greedy 0 (to obtain random subset results, saved to .txt to os.getcwd() directory)
+python logistic_self.py --data mnist --method sgd -s 0.1 --greedy 1 (to obtain CRAIG results)
+
+In case no additional parameters stated, a validation greedy search would be performed, which is not recommended due to time expendatures.
+
+
 
 
 ## Computing Forgetting Counts
